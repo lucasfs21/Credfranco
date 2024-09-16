@@ -44,8 +44,6 @@ class CommissionController extends Controller implements HasMiddleware
         $commissionPercentage = $calculated['percentage'];
         $commissionValue = $calculated['value'];
 
-        $commissionValue = $totalSales * ($commissionPercentage / 100);
-
         $commission = Commission::create([
             'user_id' => $validated['user_id'],
             'total_sales' => $totalSales,
